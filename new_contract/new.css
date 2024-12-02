@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Montserrat:ital,wght@0,100;1,100&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", "sans-serif";
+    box-sizing: border-box;
+}
+
+:root{
+    --AGPRINCIPAL: #BC843C;
+    --greenAG: #10a37f;
+
+    --DarkColor:#171717;
+    --DargGray:rgba(0.282, 0.267, 0.267, 0.7);
+
+    --grayLith: rgba(184, 184, 184, 0.4);
+    --ColorLith: white; 
+    
+    --AGSECON: rgba(184,184,184,205);
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    margin-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.container{
+    margin-top: 2px;
+    height: 90%;
+    width: 450px;
+    padding: 25px 40px 10px 25px;
+    border: 2px solid var(--greenAG);
+    border-radius: 15px;
+    background-color: var(--DarkColor);
+    opacity: 0.8;
+    
+}
+
+.container h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+label{
+    position: relative;
+    width: 35px;
+    height: 30px;
+    justify-items: center;
+}
+
+
+label input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+label span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 3px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+label span::after{
+    content: '';
+    position: absolute;
+    left: 11px;
+    bottom: 10px;
+    width: 5px;
+    height: 5px;
+    border: solid #00ff0a;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+input:checked ~ span::after{
+    width: 20px;
+    height: 40px;
+    opacity: 1;
+}
+
+.container .inputbox{
+    position: relative;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 5vh;
+    margin-top: 3vh;
+    margin-top: 1vh;
+}
+
+.container .inputbox input{
+    width: 100%;
+    height: 5vh;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #000;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    font-size: 1.5vw;
+    transition: 0.5s;
+}
+
+.container .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1.5vw;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.container .inputbox input:valid ~ span,
+.container .inputbox input:focus ~ span{
+    color: var(--greenAG);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #000;
+    border-left: 1px solid var(--greenAG);
+    border-right:1px solid var(--greenAG);
+    letter-spacing: 0.2em;
+}
+
+.container .inputbox:nth-child(2) input:valid ~ span,
+.container .inputbox:nth-child(2) input:focus ~ span{
+    background: var(--greenAG);
+    color: white;
+    border-radius: 2px;
+}
+
+.container .inputbox:nth-child(4) input:valid ~ span,
+.container .inputbox:nth-child(4) input:focus ~ span{
+    background: var(--greenAG);
+    color: white;
+    border-radius: 2px;
+}
+
+.container .inputbox:nth-child(7) input:valid ~ span,
+.container .inputbox:nth-child(7) input:focus ~ span{
+    background: var(--greenAG);
+    color: white;
+    border-radius: 2px;
+}
+
+.container .inputbox:nth-child(9) input:valid ~ span,
+.container .inputbox:nth-child(9) input:focus ~ span{
+    background: var(--greenAG);
+    color: white;
+    border-radius: 2px;
+}
+
+.container .inputbox input:valid,
+.container .inputbox input:focus{
+    border: 1px solid var(--greenAG);
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: var(--greenAG);
+    background-image: none;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.container .inputbox .selectConfirm{
+    position: relative;
+    display: flex;
+    width: 20%;
+    line-height: 3;
+    background: #023628;
+    overflow: hidden;
+    border-radius: .25em;
+    font-size: 1em;
+    z-index: 10;
+    position: absolute;
+    top: 0;        
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    border: 1px solid var(--greenAG);
+}
+
+.container .inputbox .selectConfirm select {
+    height: 95%;
+    margin: 1;
+    padding: 0 10px;
+    text-align: center;
+    appearance: none;
+    background: none;
+    background-color: #000;
+    box-sizing: border-box;
+}
+
+.container .inputbox .selectTime{
+    position: relative;
+    display: flex;
+    width: 20%;
+    line-height: 3;
+    background: #023628;
+    overflow: hidden;
+    border-radius: .25em;
+    font-size: 1em;
+    z-index: 10;
+    position: absolute;
+    top: 0;        
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.container .inputbox .selectTime select {
+    height: 100%;
+    margin: 0;
+    border: none;
+    padding: 0 10px;
+    text-align: center;
+    background: var(--greenAG);
+}
+
+.select{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5vh;
+    line-height: 3;
+    background: #023628;
+    overflow: hidden;
+    border-radius: .25em;
+    font-size: 1em;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-right: 1px;
+    z-index: 10;
+}
+
+
+select{
+    flex: 1;
+    padding: 0 .5em;
+    color: white;
+    cursor: pointer;
+}
+
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #000;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+}
+
+.select:hover::after{
+    color: var(--greenAG);
+
+}
+
+.wrapper{
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px red;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.wrapper input[type="file"] {
+    display: none;
+}
+
+.wrapper label{
+    height: 60vh;
+    width: 40vw;
+    border-radius: 6px;
+    border: 4px dashed #000;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    background-color:rgba(255, 255, 255, 0.25) ;
+}
+
+.wrapper label:hover {
+    border: 4px dashed var(--greenAG);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper span{
+    position: absolute;
+    font-size: 24px; 
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.1vh;
+    height: 50%;
+    width: 40%;
+    pointer-events: none;
+    border-color: transparent;
+}
+
+.wrapper .icons{
+    position: absolute;
+    font-size: 24px; 
+    margin-right: 8px;
+    display: flex;
+    height: 50%;
+    width: 40%;
+    pointer-events: none; 
+}
+
+.wrapper .icons ion-icon {
+    font-size: 40px;
+    color: #000;
+    border: none;
+}
+
+.wrapper label:hover + .icons ion-icon, .icons:hover ion-icon {
+    color: var(--greenAG);
+}
+
+.wrapper .pdf{
+    width: 100%;
+    height: 100%;
+}
+
+.button-Add{
+    width: 50%;
+    background: var(--greenAG);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    border-radius: 10px;
+    display:none;
+}

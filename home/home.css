@@ -1,0 +1,53 @@
+.letter-container {
+    width: 80%;  /* Haciendo la carta más ancha */
+    margin: 5px auto;  /* Ajustando el margen para que se vea más arriba */
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.letter-header h1 {
+    color: #2EE59D;
+    margin-bottom: 5px;
+}
+
+.letter-header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.letter-body {
+    margin: 20px 0;
+}
+
+.letter-body h2 {
+    color: #2EE59D;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.letter-body p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.letter-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em;
+    color: #888;
+}
+
+.letter-footer p {
+    margin: 0;
+}
+    

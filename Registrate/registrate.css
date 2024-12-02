@@ -1,0 +1,49 @@
+/* Registration Section */
+.form-container {
+    display: block; /* Cambia a block para que sea visible */
+    max-width: 800px;
+    margin: 30px auto;
+    background: #111; /* Fondo negro intenso */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2EE59D;
+}
+
+.form-container form .inputbox {
+    margin-bottom: 15px;
+}
+
+.form-container form .inputbox input,
+.form-container form .inputbox select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #2EE59D;
+    border-radius: 5px;
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+}
+
+.form-container form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #000;
+    background-color: #2EE59D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container form button:hover {
+    background-color: #24c78a;
+}

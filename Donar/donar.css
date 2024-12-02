@@ -1,0 +1,80 @@
+
+.donation-container {
+    width: 70%;
+    margin: 5px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.donation-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.donation-header h1 {
+    color: #2EE59D;
+    margin-bottom: 10px;
+}
+
+.donation-header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-form label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+}
+
+.donation-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.donation-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em;
+    color: #888;
+}
+
+.donation-footer p {
+    margin: 0;
+}
+
+.button {
+    background-color: #2EE59D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #187bcd;
+}
+
+/* Estilo para asegurarse de que los campos ocupen todo el ancho disponible */
+.donation-form input[type="text"],
+.donation-form input[type="number"] {
+    width: calc(100% - 24px); /* Ajuste de espacio adicional */
+    margin-bottom: 20px;
+}
